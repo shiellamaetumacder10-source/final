@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Shiella Mae D. Tumacder | IT Portfolio</title>
-    <!-- Google Fonts for Professional Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 (free icons) -->
+    <title>Shiella Mae D. Tumacder | IT Portfolio — Elegant Edition</title>
+    <!-- Google Fonts (modern & refined) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (pro-grade icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -16,576 +16,551 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #0f172a;
-            line-height: 1.5;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f9fafb;
+            color: #111827;
             scroll-behavior: smooth;
+            line-height: 1.5;
         }
 
-        /* modern gradient + subtle noise texture */
-        .bg-gradient {
-            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+        /* custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #eef2ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 12px;
         }
 
-        /* container system */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* header / hero section - professional & clean */
-        .hero {
-            background: linear-gradient(110deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 3.5rem 0 3rem 0;
-            border-bottom: 4px solid #3b82f6;
+        /* modern glassmorphism + gradients */
+        .hero-section {
             position: relative;
+            background: linear-gradient(135deg, #0B1120 0%, #19233c 100%);
+            padding: 3rem 0 3.5rem 0;
             overflow: hidden;
+            isolation: isolate;
         }
 
-        .hero::before {
-            content: '';
+        .hero-section::before {
+            content: "";
             position: absolute;
             top: -30%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: rgba(59,130,246,0.08);
+            right: -15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(59,130,246,0) 70%);
             border-radius: 50%;
             pointer-events: none;
         }
 
-        .hero-content {
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(168,85,247,0.12) 0%, rgba(168,85,247,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* profile row */
+        .profile-row {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 2.5rem;
+            gap: 2rem;
             justify-content: space-between;
         }
 
-        .profile-left {
+        .profile-info {
             display: flex;
             align-items: center;
             gap: 2rem;
             flex-wrap: wrap;
         }
 
-        .avatar-frame {
-            background: white;
-            border-radius: 32px;
+        .img-wrapper {
+            background: linear-gradient(145deg, #ffffff20, #ffffff08);
+            backdrop-filter: blur(2px);
             padding: 5px;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease;
+            border-radius: 36px;
+            box-shadow: 0 30px 40px -20px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
         }
 
-        .avatar-frame:hover {
+        .img-wrapper:hover {
             transform: scale(1.02);
         }
 
-        .avatar-frame img {
-            width: 130px;
-            height: 130px;
+        .profile-img {
+            width: 140px;
+            height: 140px;
             object-fit: cover;
-            border-radius: 28px;
-            display: block;
+            border-radius: 32px;
             background: #f1f5f9;
+            border: 2px solid rgba(255,255,255,0.3);
         }
 
-        .hero-text h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+        .name-title h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
             letter-spacing: -0.02em;
-            margin-bottom: 0.4rem;
-            background: linear-gradient(to right, #ffffff, #bfdbfe);
-            background-clip: text;
+            background: linear-gradient(to right, #ffffff, #b9d0ff);
             -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
+            margin-bottom: 0.3rem;
         }
 
-        .hero-text .tagline {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #cbd5e1;
-            display: flex;
+        .badge-role {
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
+            gap: 10px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(8px);
+            border-radius: 100px;
+            padding: 0.5rem 1.3rem;
+            font-weight: 500;
+            color: #e0e7ff;
+            font-size: 0.9rem;
+            border: 0.5px solid rgba(255,255,255,0.2);
         }
 
-        .hero-text .tagline i {
-            color: #3b82f6;
-            font-size: 1.2rem;
-        }
-
-        .contact-badge {
+        .quick-contact {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             margin-top: 1rem;
         }
 
-        .contact-badge span {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(4px);
-            padding: 0.5rem 1rem;
-            border-radius: 40px;
+        .quick-contact span {
+            background: #11182780;
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 0.5rem 1.2rem;
             font-size: 0.85rem;
             font-weight: 500;
+            color: #e2e8f0;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            border: 0.5px solid #334155;
         }
 
-        .contact-badge i {
-            color: #60a5fa;
-        }
-
-        /* main grid layout - modern cards */
-        .dashboard {
+        /* main grid - professional cards with hover sophistication */
+        .grid-dashboard {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.8rem;
+            gap: 2rem;
             margin: 3rem 0 3rem 0;
         }
 
-        .card {
+        .card-pro {
             background: #ffffff;
-            border-radius: 28px;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
-            transition: all 0.25s ease;
+            border-radius: 2rem;
+            transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+            box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.05), 0 0 0 1px #eef2ff;
             overflow: hidden;
-            border: 1px solid #e9eef3;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 25px 30px -12px rgba(0,0,0,0.1);
-            border-color: #cbd5e1;
+        .card-pro:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.12), 0 0 0 1px #cbd5e1;
         }
 
-        .card-header {
-            padding: 1.4rem 1.8rem 0.6rem 1.8rem;
-            border-bottom: 2px solid #f1f5f9;
+        .card-header-gradient {
+            padding: 1.2rem 1.8rem 0.6rem 1.8rem;
             display: flex;
             align-items: center;
             gap: 12px;
+            border-bottom: 2px solid #f1f5f9;
         }
 
-        .card-header i {
+        .card-header-gradient i {
             font-size: 1.8rem;
-            color: #3b82f6;
-            background: #eff6ff;
-            padding: 8px;
-            border-radius: 16px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        .card-header h2 {
+        .card-header-gradient h2 {
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 700;
             color: #0f172a;
             margin: 0;
         }
 
         .card-body {
-            padding: 1.2rem 1.8rem 1.8rem 1.8rem;
+            padding: 1.4rem 1.8rem 1.8rem 1.8rem;
         }
 
-        /* personal details grid style */
-        .details-list {
-            display: grid;
-            grid-template-columns: 1fr;
+        /* full width card */
+        .full-span {
+            grid-column: span 2;
+        }
+
+        /* Personal details stylish */
+        .detail-flex {
+            display: flex;
+            flex-direction: column;
             gap: 0.9rem;
         }
 
-        .detail-item {
+        .detail-row {
             display: flex;
             align-items: center;
-            gap: 14px;
-            font-size: 0.95rem;
+            gap: 1rem;
+            flex-wrap: wrap;
             border-bottom: 1px dashed #eef2ff;
             padding-bottom: 0.7rem;
         }
 
-        .detail-item i {
-            width: 28px;
+        .detail-row .detail-icon {
+            width: 36px;
+            height: 36px;
+            background: #eef2ff;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             color: #3b82f6;
-            font-size: 1.15rem;
-            text-align: center;
+            font-size: 1.1rem;
         }
 
-        .detail-item strong {
-            font-weight: 600;
-            min-width: 95px;
+        .detail-row strong {
+            font-weight: 700;
+            min-width: 100px;
             color: #1e293b;
         }
 
-        /* skills chips */
-        .skills-wrapper {
+        /* SKILLS - modern chip style */
+        .chips-group {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            margin-top: 8px;
+            margin-bottom: 1rem;
         }
 
-        .skill-chip {
-            background: #f1f5f9;
-            border-radius: 100px;
-            padding: 8px 18px;
-            font-weight: 500;
+        .skill-item {
+            background: #f8fafc;
+            border-radius: 60px;
+            padding: 8px 20px;
+            font-weight: 600;
             font-size: 0.85rem;
-            color: #0f172a;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            transition: all 0.2s;
             border: 1px solid #e2e8f0;
+            transition: all 0.2s;
         }
 
-        .skill-chip i {
+        .skill-item i {
             color: #3b82f6;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
-        .skill-chip:hover {
-            background: #e6edfa;
-            border-color: #94a3b8;
-        }
-
-        .level-badge {
+        .progress-indicator {
+            font-size: 0.7rem;
             background: #e2e8f0;
             border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 3px 8px;
+            padding: 2px 8px;
             margin-left: 6px;
+            font-weight: 500;
             color: #334155;
         }
 
-        /* full-width card special */
-        .full-width {
-            grid-column: span 2;
-        }
-
-        /* Quote / inspiration section - modern callout */
-        .inspire-quote {
-            background: #fefce8;
-            border-left: 6px solid #facc15;
-            border-radius: 20px;
-            padding: 1.2rem 1.8rem;
+        /* inspiration block */
+        .inspire-block {
+            background: linear-gradient(115deg, #eff6ff, #fef9c3);
+            border-radius: 1.5rem;
+            padding: 1.3rem 1.6rem;
             margin-top: 0.5rem;
-            background: linear-gradient(120deg, #fffbeb, #fef9e3);
+            border-left: 6px solid #facc15;
         }
 
-        .inspire-quote p {
-            font-size: 1rem;
-            line-height: 1.5;
-            color: #422800;
-            font-weight: 500;
-        }
-
-        .inspire-quote i {
-            color: #eab308;
-            margin-right: 10px;
-        }
-
-        /* about me styling */
-        .about-text {
-            font-size: 1rem;
-            color: #1f2a44;
-            line-height: 1.6;
-        }
-
-        /* footer modern */
-        .footer {
-            background: #0f172a;
+        /* footer premium */
+        .footer-premium {
+            background: #0b1120;
             color: #cbd5e6;
             text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 1rem;
-            border-top: 1px solid #1e293b;
+            padding: 2.5rem 1rem;
+            margin-top: 2rem;
+            border-top: 1px solid #1f2a44;
         }
 
-        .footer p {
-            font-size: 0.9rem;
-            letter-spacing: 0.3px;
-        }
-
-        .social-links {
+        .social-ring {
             display: flex;
             justify-content: center;
-            gap: 1.8rem;
-            margin-bottom: 0.8rem;
+            gap: 2rem;
+            margin-bottom: 1rem;
         }
 
-        .social-links a {
-            color: #94a3b8;
+        .social-ring a {
+            background: #1f2a3e;
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 60px;
+            color: #bfd9ff;
+            transition: 0.2s;
             font-size: 1.3rem;
-            transition: color 0.2s;
         }
 
-        .social-links a:hover {
-            color: #3b82f6;
+        .social-ring a:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-3px);
         }
 
-        /* responsive */
+        /* responsive touched */
         @media (max-width: 850px) {
-            .dashboard {
+            .grid-dashboard {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
             }
-            .full-width {
+            .full-span {
                 grid-column: span 1;
             }
-            .hero-content {
-                flex-direction: column;
-                align-items: flex-start;
+            .name-title h1 {
+                font-size: 2rem;
             }
             .container {
                 padding: 0 1.5rem;
             }
-            .hero-text h1 {
-                font-size: 2rem;
-            }
         }
-
         @media (max-width: 550px) {
-            .profile-left {
+            .profile-info {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 1rem;
             }
-            .detail-item {
-                flex-wrap: wrap;
-                gap: 8px;
-            }
-            .detail-item strong {
-                min-width: auto;
+            .detail-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
             }
         }
-
-        /* utility */
-        .text-muted {
-            color: #475569;
-        }
-        hr {
-            margin: 0.5rem 0;
-            border: 0;
-            height: 1px;
-            background: #eef2f6;
+        .btn-ghost {
+            background: #eef2ff;
+            color: #1e40af;
+            border-radius: 40px;
+            padding: 5px 12px;
+            font-weight: 500;
+            font-size: 0.7rem;
         }
     </style>
 </head>
 <body>
 
-<!-- Hero Section / Professional Banner -->
-<section class="hero">
+<!-- HERO SECTION: Elegant & premium redesign -->
+<section class="hero-section">
     <div class="container">
-        <div class="hero-content">
-            <div class="profile-left">
-                <div class="avatar-frame">
-                    <!-- profile image: same filename as original, but with elegant fallback if missing -->
-                    <img src="shiella.jpg.jpg" alt="Shiella Mae D. Tumacder">
+        <div class="profile-row">
+            <div class="profile-info">
+                <div class="img-wrapper">
+                    <img class="profile-img" src="shiella.jpg.jpg" alt="Shiella Mae D. Tumacder">
                 </div>
-                <div class="hero-text">
+                <div class="name-title">
                     <h1>Shiella Mae D. Tumacder</h1>
-                    <div class="tagline">
-                        <i class="fas fa-laptop-code"></i> 
-                        <span>Aspiring IT Professional & Future Full-Stack Developer</span>
+                    <div class="badge-role">
+                        <i class="fas fa-terminal"></i> BS Information Technology · Innovator
                     </div>
-                    <div class="contact-badge">
-                        <span><i class="fas fa-envelope"></i> shiellamae.tumacder@it.edu</span>
-                        <span><i class="fas fa-map-marker-alt"></i> Philippines</span>
-                        <span><i class="fas fa-calendar-alt"></i> Born: May 10, 2007</span>
+                    <div class="quick-contact">
+                        <span><i class="fas fa-map-pin"></i> Philippines</span>
+                        <span><i class="far fa-calendar-alt"></i> May 10, 2007 (19 y/o)</span>
+                        <span><i class="far fa-envelope"></i> shiella.it@edu.ph</span>
                     </div>
+                </div>
+            </div>
+            <div class="quote-mini">
+                <div style="background: rgba(255,255,255,0.08); border-radius: 28px; padding: 0.8rem 1.4rem; backdrop-filter: blur(8px);">
+                    <i class="fas fa-quote-left" style="color:#93c5fd;"></i>
+                    <p style="font-size: 0.85rem; max-width: 240px; color:#e2e8f0;">"Code with purpose, build with empathy."</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Main Content Grid -->
 <div class="container">
-    <div class="dashboard">
-
-        <!-- About Me Card (full-width style but part of grid) -->
-        <div class="card full-width">
-            <div class="card-header">
+    <div class="grid-dashboard">
+        
+        <!-- About Me Card - Professional + full width vibe -->
+        <div class="card-pro full-span">
+            <div class="card-header-gradient">
                 <i class="fas fa-user-astronaut"></i>
                 <h2>About Me</h2>
             </div>
             <div class="card-body">
-                <p class="about-text">
-                    Hi! I am <strong>Shiella Mae D. Tumacder</strong>, a passionate student pursuing a Bachelor of Science in Information Technology. 
-                    I find deep excitement in the ever-evolving world of technology — from building responsive websites to understanding how systems communicate. 
-                    My drive comes from a genuine curiosity about how things work digitally. I'm committed to mastering modern web technologies, problem-solving, 
-                    and creating user-friendly experiences. Outside academics, I enjoy exploring UI/UX trends and working on mini-projects that bring ideas to life.
-                </p>
-                <div class="inspire-quote" style="margin-top: 1rem;">
-                    <p><i class="fas fa-quote-left"></i> "Programming isn't just about code — it's about crafting solutions that empower people. I want to build digital tools that matter."</p>
+                <p style="font-size: 1rem; line-height: 1.6; margin-bottom: 1rem;">I'm <strong>Shiella Mae D. Tumacder</strong>, a driven IT student who believes technology is the ultimate tool for shaping the future. From designing responsive layouts to exploring backend logic, I embrace every challenge with curiosity. My journey in tech started with a simple curiosity about how websites work — and now, I'm determined to craft solutions that are both powerful and human-centric. I thrive on collaboration, continuous learning, and turning ideas into digital realities.</p>
+                <div class="inspire-block" style="margin-top: 0;">
+                    <i class="fas fa-glasses" style="margin-right: 8px; color:#facc15;"></i>  Outside the lab, I love reading about AI trends, participating in code jams, and sketching UI wireframes. Let's build something meaningful!
                 </div>
             </div>
         </div>
 
-        <!-- Personal Details Card -->
-        <div class="card">
-            <div class="card-header">
+        <!-- Personal Information Card : Enhanced premium -->
+        <div class="card-pro">
+            <div class="card-header-gradient">
                 <i class="fas fa-id-card"></i>
                 <h2>Personal Profile</h2>
             </div>
             <div class="card-body">
-                <div class="details-list">
-                    <div class="detail-item">
-                        <i class="fas fa-user-circle"></i>
-                        <strong>Full Name:</strong> <span>Shiella Mae D. Tumacder</span>
+                <div class="detail-flex">
+                    <div class="detail-row">
+                        <div class="detail-icon"><i class="fas fa-user"></i></div>
+                        <strong>Full Name</strong> <span>Shiella Mae D. Tumacder</span>
                     </div>
-                    <div class="detail-item">
-                        <i class="fas fa-birthday-cake"></i>
-                        <strong>Age:</strong> <span>19 years old</span>
+                    <div class="detail-row">
+                        <div class="detail-icon"><i class="fas fa-cake-candles"></i></div>
+                        <strong>Birthday</strong> <span>May 10, 2007 · Age 19</span>
                     </div>
-                    <div class="detail-item">
-                        <i class="fas fa-calendar-week"></i>
-                        <strong>Birthday:</strong> <span>May 10, 2007</span>
+                    <div class="detail-row">
+                        <div class="detail-icon"><i class="fas fa-envelope"></i></div>
+                        <strong>Email</strong> <span>ShiellamaeTumacder@gmail.com</span>
                     </div>
-                    <div class="detail-item">
-                        <i class="fas fa-envelope-open-text"></i>
-                        <strong>Email:</strong> <span>ShiellamaeTumacder@gmail.com</span>
+                    <div class="detail-row">
+                        <div class="detail-icon"><i class="fas fa-location-dot"></i></div>
+                        <strong>Location</strong> <span>Philippines (Luzon)</span>
                     </div>
-                    <div class="detail-item">
-                        <i class="fas fa-map-pin"></i>
-                        <strong>Address:</strong> <span>Philippines</span>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <strong>Course:</strong> <span>BS Information Technology</span>
+                    <div class="detail-row">
+                        <div class="detail-icon"><i class="fas fa-code-branch"></i></div>
+                        <strong>Student ID</strong> <span>BSIT-3C · University</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Skills & Competencies Card -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-code"></i>
-                <h2>Technical Skills</h2>
+        <!-- Skills & expertise modern -->
+        <div class="card-pro">
+            <div class="card-header-gradient">
+                <i class="fas fa-laptop-code"></i>
+                <h2>Tech Stack & Skills</h2>
             </div>
             <div class="card-body">
-                <div class="skills-wrapper">
-                    <div class="skill-chip">
-                        <i class="fab fa-html5"></i> HTML5 <span class="level-badge">Beginner → Intermediate</span>
-                    </div>
-                    <div class="skill-chip">
-                        <i class="fab fa-css3-alt"></i> CSS3 <span class="level-badge">Beginner → Intermediate</span>
-                    </div>
-                    <div class="skill-chip">
-                        <i class="fas fa-wrench"></i> Troubleshooting <span class="level-badge">Foundational</span>
-                    </div>
-                    <div class="skill-chip">
-                        <i class="fas fa-desktop"></i> Computer Hardware <span class="level-badge">Basic</span>
-                    </div>
-                    <div class="skill-chip">
-                        <i class="fas fa-database"></i> SQL Fundamentals <span class="level-badge">Learning</span>
-                    </div>
+                <div class="chips-group">
+                    <div class="skill-item"><i class="fab fa-html5"></i> HTML5 <span class="progress-indicator">Intermediate</span></div>
+                    <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3 <span class="progress-indicator">Intermediate</span></div>
+                    <div class="skill-item"><i class="fab fa-js"></i> JavaScript <span class="progress-indicator">Learning</span></div>
+                    <div class="skill-item"><i class="fas fa-tools"></i> Troubleshooting <span class="progress-indicator">Competent</span></div>
+                    <div class="skill-item"><i class="fas fa-mobile-alt"></i> Responsive Design <span class="progress-indicator">Building</span></div>
+                    <div class="skill-item"><i class="fas fa-database"></i> SQL Basics <span class="progress-indicator">Foundations</span></div>
                 </div>
-                <hr>
-                <div style="margin-top: 16px;">
-                    <p class="text-muted" style="font-size: 0.85rem;"><i class="fas fa-chart-line"></i> Currently advancing in responsive design, JavaScript basics, and version control (Git). I believe in continuous growth and stay updated with industry trends.</p>
+                <hr style="margin: 1rem 0; border-color:#eef2ff;">
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                    <span style="font-size: 0.8rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> Version Control (Git)</span>
+                    <span style="font-size: 0.8rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> Figma basics</span>
+                    <span style="font-size: 0.8rem;"><i class="fas fa-check-circle" style="color:#10b981;"></i> CLI proficiency</span>
                 </div>
+                <div class="btn-ghost" style="margin-top: 1rem; display: inline-block; background:#eff6ff;"><i class="fas fa-chart-simple"></i> Currently mastering: Tailwind CSS + React basics</div>
             </div>
         </div>
 
-        <!-- Inspiration as a Programmer Card (full width) -->
-        <div class="card full-width">
-            <div class="card-header">
+        <!-- Inspiration as a programmer redesigned -->
+        <div class="card-pro full-span">
+            <div class="card-header-gradient">
                 <i class="fas fa-lightbulb"></i>
-                <h2>My Inspiration & Vision</h2>
+                <h2>Passion & Programming Philosophy</h2>
             </div>
             <div class="card-body">
-                <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem;">
                     <div style="flex: 2;">
-                        <p style="font-size: 1rem; line-height: 1.6;">
-                            I am deeply inspired by the power of technology to solve real-world problems. From creating accessible websites for small businesses 
-                            to building systems that streamline daily tasks — programming gives me the ability to turn imagination into impact. I chose IT 
-                            because it combines logical thinking with creativity. As I continue my academic journey, I aim to master full-stack development, 
-                            contribute to open-source, and eventually mentor young girls in tech. My mission is to become a solution architect who designs 
-                            inclusive and efficient digital ecosystems.
-                        </p>
-                        <div style="margin-top: 1.2rem; background: #eef2ff; padding: 0.8rem 1rem; border-radius: 1rem;">
-                            <i class="fas fa-rocket" style="color: #2563eb;"></i> 
-                            <strong>Goal:</strong> Build real-world projects, intern at innovative tech companies, and leave a mark in Philippine IT industry.
+                        <p style="font-weight: 500; font-size: 1rem;">What drives me as a future IT professional? The power to create from nothing. I'm inspired by developers who use tech for social good — building accessible platforms, automating tedious tasks, and enabling digital inclusion. Every line of code is a step toward solving real human problems. I specifically chose IT because it's a field that never stops evolving, and I love the feeling of learning something new every day.</p>
+                        <div style="margin-top: 1rem; background: #f5f3ff; padding: 0.9rem 1rem; border-radius: 1.2rem;">
+                            <i class="fas fa-chalkboard-user" style="color:#8b5cf6;"></i> <strong>My vision:</strong> To become a full-stack developer and technical mentor, bridging the gap between communities and digital transformation in the Philippines.
                         </div>
                     </div>
-                    <div style="flex: 1; text-align: center;">
-                        <i class="fas fa-seedling" style="font-size: 3.5rem; color: #3b82f6; opacity: 0.7;"></i>
-                        <p style="font-size: 0.8rem; margin-top: 8px;">"Code. Create. Transform."</p>
+                    <div style="flex: 1; min-width: 150px; background: linear-gradient(145deg, #f8fafc, #ffffff); border-radius: 1.5rem; padding: 1rem; text-align: center;">
+                        <i class="fas fa-quote-right" style="font-size: 2rem; color:#3b82f6; opacity: 0.6;"></i>
+                        <p style="font-size: 0.85rem; margin-top: 10px;">"Technology is best when it brings people together — that's why I code."</p>
                     </div>
                 </div>
-                <div class="inspire-quote" style="margin-top: 1.5rem; background: #f0f9ff; border-left-color: #3b82f6;">
-                    <p><i class="fas fa-heart" style="color: #ef4444;"></i> "Technology is best when it brings people together. I aspire to craft solutions that are not just functional, but also human-centered." – Shiella Mae</p>
+                <div class="inspire-block" style="margin-top: 1.2rem; background:#ecfdf5; border-left-color: #10b981;">
+                    <i class="fas fa-rocket"></i> 2026 roadmap: Build a complete portfolio project, contribute to open source, and network with local tech communities.
                 </div>
             </div>
         </div>
 
-        <!-- Additional : Education & Future path (extra touch for professionalism) -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-school"></i>
-                <h2>Education Path</h2>
+        <!-- Education credentials + additional achievements -->
+        <div class="card-pro">
+            <div class="card-header-gradient">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Academic Journey</h2>
             </div>
             <div class="card-body">
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                    <div>
-                        <i class="fas fa-university" style="color:#3b82f6; width: 28px;"></i>
-                        <strong style="margin-left: 8px;">Bachelor of Science in Information Technology</strong>
-                        <p style="margin-top: 6px; margin-left: 34px; font-size: 0.85rem; color: #334155;">Expected Graduation: 2027 | Major in Web & Cloud Technologies</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-certificate" style="color:#3b82f6; width: 28px;"></i>
-                        <strong style="margin-left: 8px;">Certifications (in progress)</strong>
-                        <p style="margin-top: 6px; margin-left: 34px; font-size: 0.85rem;">Responsive Web Design (freeCodeCamp) · IT Essentials (Cisco)</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-chalkboard-user" style="color:#3b82f6;"></i>
-                        <strong style="margin-left: 8px;">Extracurricular</strong>
-                        <p style="margin-top: 6px; margin-left: 34px; font-size: 0.85rem;">Student Developer Club · Tech-Talk Volunteer · Hackathon participant 2025</p>
-                    </div>
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; gap: 12px; align-items: baseline;"><i class="fas fa-university" style="color:#3b82f6;"></i> <strong>Bachelor of Science in Information Technology</strong></div>
+                    <p style="margin-left: 28px; font-size: 0.9rem; color: #334155;">Major in Web & Systems Development · 2024 – Present</p>
+                    <p style="margin-left: 28px; font-size: 0.85rem;"><i class="fas fa-star-of-life" style="font-size: 0.7rem; color:#f59e0b;"></i> Academic scholar, Dean’s Lister (First Year)</p>
+                </div>
+                <div>
+                    <strong><i class="fas fa-code"></i> Recent coursework:</strong>
+                    <ul style="margin-top: 8px; margin-left: 20px; color: #2d3a5e; font-size: 0.85rem;">
+                        <li>Web Development Fundamentals (HTML/CSS/JS)</li>
+                        <li>Object-Oriented Programming (Java)</li>
+                        <li>Database Management System (MySQL)</li>
+                        <li>Computer Networking Essentials</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Soft Skills & future tools -->
-        <div class="card">
-            <div class="card-header">
-                <i class="fas fa-brain"></i>
-                <h2>Core Strengths</h2>
+        <!-- Future goals & soft skills matrix -->
+        <div class="card-pro">
+            <div class="card-header-gradient">
+                <i class="fas fa-chart-line"></i>
+                <h2>Professional Goals</h2>
             </div>
             <div class="card-body">
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px;">
-                    <span style="background:#eef2ff; padding: 6px 15px; border-radius: 30px; font-size:0.85rem;"><i class="fas fa-comments"></i> Communication</span>
-                    <span style="background:#eef2ff; padding: 6px 15px; border-radius: 30px; font-size:0.85rem;"><i class="fas fa-users"></i> Teamwork</span>
-                    <span style="background:#eef2ff; padding: 6px 15px; border-radius: 30px; font-size:0.85rem;"><i class="fas fa-hourglass-half"></i> Time Management</span>
-                    <span style="background:#eef2ff; padding: 6px 15px; border-radius: 30px; font-size:0.85rem;"><i class="fas fa-search"></i> Detail-oriented</span>
-                    <span style="background:#eef2ff; padding: 6px 15px; border-radius: 30px; font-size:0.85rem;"><i class="fas fa-lightbulb"></i> Problem-solving</span>
+                <div style="display: flex; flex-direction: column; gap: 0.7rem;">
+                    <div><i class="fas fa-bullseye" style="color:#3b82f6; width: 28px;"></i> <strong>Short-term:</strong> Complete advanced front-end certs & build 3 real-world projects.</div>
+                    <div><i class="fas fa-globe" style="color:#3b82f6;"></i> <strong>Long-term:</strong> Become a full-stack developer / technical lead for an impact-driven startup.</div>
+                    <hr>
+                    <div><i class="fas fa-heart" style="color:#ef4444;"></i> <strong>Soft skills honed:</strong> Critical thinking, collaboration, adaptability, public speaking.</div>
+                    <div class="btn-ghost" style="background: #eef2ff; align-self: flex-start;"><i class="fab fa-github"></i> Open to collaborations & internships 2026</div>
                 </div>
-                <hr>
-                <p class="text-muted" style="margin-top: 12px;"><i class="fas fa-tools"></i> Tools I'm learning: VS Code, Figma, Git, Chrome DevTools, and basic CLI commands.</p>
             </div>
         </div>
 
+        <!-- Fun / Fact Quote section (adding personality) -->
+        <div class="card-pro full-span" style="background: linear-gradient(115deg, #ffffff, #fef9e3);">
+            <div class="card-body" style="text-align: center;">
+                <i class="fas fa-mug-hot" style="font-size: 2rem; color: #f97316;"></i>
+                <p style="font-size: 1rem; max-width: 80%; margin: 0.5rem auto;">"Every expert was once a beginner. I embrace every bug, every challenge, and every ‘Aha!’ moment — because that’s where growth lives."</p>
+                <p style="font-weight: 600; margin-top: 8px;">— Shiella Mae, future IT leader</p>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Professional Footer -->
-<footer class="footer">
-    <div class="social-links">
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+<!-- Footer: Professional & sleek -->
+<footer class="footer-premium">
+    <div class="social-ring">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-dev"></i></a>
     </div>
-    <p>© 2026 Shiella Mae D. Tumacder — Aspiring IT Professional | Built with dedication & modern design</p>
-    <p style="font-size: 0.75rem; margin-top: 8px;">"Empowering communities through technology, one line of code at a time."</p>
+    <p>© 2026 Shiella Mae D. Tumacder — Crafted with precision and purpose</p>
+    <p style="margin-top: 8px; font-size: 0.75rem; letter-spacing: 0.3px;">Portfolio | Aspiring IT Professional | BS Information Technology</p>
+    <div style="margin-top: 1rem;">
+        <span style="background:#1f2a44; padding: 4px 12px; border-radius: 80px; font-size: 0.7rem;">#womenintech  #futurecoder</span>
+    </div>
 </footer>
 
 </body>
